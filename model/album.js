@@ -7,7 +7,8 @@ const albumSchema = new Schema(
         artist: {
             ref: 'Artist', 
             type: Schema.Types.ObjectId 
-        }
+        },
+        image: { type: String, required: true } 
     },
     { timestamps: true }
 )
