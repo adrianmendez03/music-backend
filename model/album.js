@@ -3,6 +3,7 @@ const { Schema, model } = require('mongoose')
 const albumSchema = new Schema(
     {
         title: { type: String, required: true },
+        yearReleased: Number,
         artist: {
             ref: 'Artist', 
             type: Schema.Types.ObjectId 
