@@ -2,7 +2,7 @@ const { Schema, model } = require('mongoose')
 
 const albumSchema = new Schema(
     {
-        title: String,
+        title: { type: String, required: true },
         artist: {
             ref: 'Artist', 
             type: Schema.Types.ObjectId 
@@ -11,6 +11,6 @@ const albumSchema = new Schema(
     { timestamps: true }
 )
 
-const Album = model('album', albumSchema)
+const Album = model('Album', albumSchema)
 
 module.exports = Album

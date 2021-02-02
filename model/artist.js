@@ -1,11 +1,11 @@
-const { Schema, model, Mongoose } = require('mongoose')
+const { Schema, model } = require('mongoose')
 
 const artistSchema = new Schema(
     {
-        name: String,
+        name: { type: String, required: true },
         albums: [
             {
-                ref: 'Albums',
+                ref: 'Album',
                 type: Schema.Types.ObjectId
             }
         ]
