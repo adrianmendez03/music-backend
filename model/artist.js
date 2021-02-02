@@ -1,4 +1,4 @@
-const { Schema, model } = require('../db/connection')
+const { Schema, model } = require('mongoose')
 
 const artistSchema = new Schema(
     {
