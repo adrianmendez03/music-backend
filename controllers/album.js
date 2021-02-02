@@ -3,7 +3,7 @@ const router = express.Router()
 const Album = require('../model/album')
 
 router.get('/', async (req, res) => {
-    res.json(await Album.find({})).populate('artist')
+    res.json(await Album.find({}).populate('artist'))
 })
 
 router.get('/:id', async (req, res) => {
