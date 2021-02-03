@@ -5,7 +5,7 @@ const cors = require('cors')
 const corsOptions = require("./configs/cors.js");
 const logger = require('morgan')
 const app = express()
-const PORT = process.env.PORT || 3000
+const PORT = { PORT = 3000, NODE_ENV = 'development' } = process.env
 
 app.use(logger('dev'))
 app.use(express.json())
